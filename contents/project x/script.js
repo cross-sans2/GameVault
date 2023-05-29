@@ -1,3 +1,4 @@
+window['inv'] = []
 loading_screen = document.getElementById('loading-screen')
 function goto(nodeId) {
     const nodes = document.getElementsByTagName('loc')
@@ -7,19 +8,29 @@ function goto(nodeId) {
     const targetNode = document.getElementById(nodeId);
     if (targetNode) {
         targetNode.style.display = "block"; // Show the target node
+        prev = window['nodepos']
         window["nodepos"] = nodeId
     } else {
         alert(`node "${nodeId}" not found, reseting to last known position`)
         goto(window["nodepos"])
     }
 }
+function give(item)
+{
+    inv.push(item)
+}
 
-function password(code, act) {
-    const enteredPassword = prompt("Enter password:", "");
+
+function password(text) {
+    var texts = text.split(',')[0]
+    var textf = text.split(',')[1]
+    var code = text.split(',')[2]
+    var act = text.split(',')[3]
+    const enteredPassword = prompt(texts, "");
     if (enteredPassword === code) {
         new Function(act)()
     } else {
-        alert("Wrong password. Access denied.");
+        alert(textf);
     }
 }
 function doact(act){
@@ -33,18 +44,31 @@ function link(node)
         /\[\[(.*)\|(.*)\]\]/
         ,
         `<button onclick="goto('$2')">$1</button>`
-    )
-    node.innerHTML = node.innerHTML.replace(
-        /\[\>(.*)\|(.*)\<\]/
+    ).replace(
+        /\[&gt;(.*)\|(.*)&lt;\]/
         ,
-        `<button onclick=doact('$2')>$1</button>`
-    )
-    node.innerHTML = node.innerHTML.replace(
-        /\[\:(.*)\|(.*),(.*)\:\]/
+        `<button onclick="doact($2)">$1</button>`
+    ).replace(
+        /\[\:(.*?)\|(.*?)\:\]/
         ,
-        `<button onclick=password('$2','$3')>$1</button>`
+        `<button onclick="password(\`$2\`)">$1</button>`
     ).replaceAll("\n",'<br>')
+    console.log(node.innerHTML)
 }
+ui = document.getElementById('ui')
+ui.innerHTML = ui.innerHTML.replace(
+    /\[\[(.*)\|(.*)\]\]/
+    ,
+    `<button onclick="goto('$2')">$1</button>`
+).replace(
+    /\[&gt;(.*)\|(.*)&lt;\]/
+    ,
+    `<button onclick="doact($2)">$1</button>`
+).replace(
+    /\[\:(.*?)\|(.*?)\:\]/
+    ,
+    `<button onclick="password(\`$2\`)">$1</button>`
+).replaceAll("\n", '<br>')
 locations = document.getElementsByTagName('loc')
 function load(){
     for(l of locations){

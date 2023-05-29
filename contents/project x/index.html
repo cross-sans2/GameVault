@@ -11,22 +11,154 @@
     <my-templates>
         [[text|id]]
         [:text|pass,act:]
-        [:>text|action<:]
+        [>text|action<]
     </my-templates>
     <div id="loading-screen">
         <h1>Loading...</h1>
+        <h2>if it takes more than three seconds to load, then a error ocoured</h2>
     </div>
+    <div id="ui">
+        [>go back|goto(prev)<]
+
+    </div>
+
     <loc id="main">
-        welcome to project X
+        <h1>Warning, this game is not recomended for people under 16, as it has strong language</h1>
+
         [[start playing|game1]]
     </loc>
     <loc id="game1">
-        you wake up in a beach desoriented
-        you look arround trying to figure out where you are, and see a city in the distance
-        [[aproach city|city]]
+        It's late afternoon in the beach
+        *You wake up confused and look around. You were sleeing under a tree on a weird beach.*
+        
+        *You start waking around holding your shoes and see a small light reflection coming from the sand*
+        [[walk towards the object|beach]]
     </loc>
-    <loc id="city">
-        wip
+    <loc id="beach">
+        You are seeing something reflecting light
+        You are still confused *You start waking around the beach with your bare feet covered in sand holding your shoes*
+        
+        *You step on a metal thing and scream*
+
+        You: Aah, What was that!?
+
+        *You look through the sands and find a small silver bracelet covered in symbols*
+
+        *Not caring much you just take it and put it on yourself.*
+
+        *You keep walking and go in the direction of the water to see the sea.*
+
+        [[Walk towards the sea|beach2]]
+    </loc>
+    
+    <loc id="beach2">
+        You are near the water
+        *You touch the water with your toes and look at the reflection of your face*
+
+        <img src="https://postimg.cc/jDxX51mk" alt="you">
+
+        *You look around and catch a glimpse of a city*
+
+        *You weirdly decide to go to the city*
+
+        [[You walk towards the city|city1]]
+    </loc>
+
+    <loc id="city1">
+        You check your surroundings ...
+        *You can see the buildings of a very small city nearby and decide to approach it.*
+    
+        [[Aproch town|town1]]
+    </loc>
+    <loc id="town1">
+        You approach the town walking slowly ...
+        *You see the city entrance and have a weird feeling of deja vu.*
+
+        *You see a lot of people near the park*
+
+        [[enter the city|town3]]
+    </loc>
+    <loc id="town3">
+You enter the city
+*You can see a familiar face:*
+
+<img src="https://i.postimg.cc/qBt398tB/lucas.png" alt="lucas">
+
+*A handsome man near the coffee shop. and you might have seeing him before.*
+
+You: Oh, that's it, you got his number... but what was it again?
+
+You: What should you do?
+
+[[Check your bag|bag1]]
+
+[:Call him on his phone|what was his number again?,the number you tryed to reach is currently out of service,346 547 8940,goto('lucas1'):]
+
+Approach the man
+
+Wait for him to notice you.
+
+    </loc>
+    <loc id="bag1">
+
+        You check your backpack
+        *You can see you have:*
+        
+        [:- 01 Cellphone|maybe i should look at the paper,i should look at the paper,346 547 8940,goto('lucas1'):]
+        
+        - A wallet with 300 dollars
+        
+        - Your ID Card
+        
+        [[A Small piece of paper|paper1]]
+    </loc>
+
+    <loc id="paper1">
+        You take a look at the paper
+        "Hey Jack here is my number in case you forgot it:
+        "346 547 8940"
+        
+        ~Lucas
+        
+        XOXO
+        
+        [[Put the paper in the bag|bag1]]
+
+    </loc>
+    <loc id="lucas1">
+        You call the number on the paper...
+        The boy across the street answers the phone and you two start talking
+
+        You: Hey!
+
+        Lucas: Hello ... who is this?
+
+        You: Oh ... you gave me your number on a paper, remember?
+
+        Lucas: Oh yeah! Thanks for calling!
+
+        You: Wanna have a surprise? Look to your left, across the street.
+
+        *He looks around and see you waving*
+
+        *You wave back as he crosses the street*
+
+        Lucas: Are you following me?
+
+        You: No, I just found you!
+
+        Lucas: Destiny, I guess.
+
+        You: Probably.
+
+        Lucas: Hey, wanna go somewhere else?
+        <a>
+
+            No, Let's talk here.
+            
+            Yeah, Let's go to that cafeteria.
+        </a>
+
     </loc>
     <script src="script.js"></script>
 </body>
