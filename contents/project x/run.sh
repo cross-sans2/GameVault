@@ -1,1 +1,1 @@
-gnome-terminal -- "project x"
+gnome-terminal -- "./project x"
