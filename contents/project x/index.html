@@ -9,8 +9,9 @@
 </head>
 <body>
     <my-templates>
-        [[go to test zone|test]]
-        [:test password|123,goto("test"):]
+        [[text|id]]
+        [:text|pass,act:]
+        [:>text|action<:]
     </my-templates>
     <div id="loading-screen">
         <h1>Loading...</h1>
@@ -20,10 +21,12 @@
         [[start playing|game1]]
     </loc>
     <loc id="game1">
-        you wake up in a beach
+        you wake up in a beach desoriented
+        you look arround trying to figure out where you are, and see a city in the distance
+        [[aproach city|city]]
     </loc>
-    <loc>
-        aweg
+    <loc id="city">
+        wip
     </loc>
     <script src="script.js"></script>
 </body>

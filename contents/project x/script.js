@@ -22,6 +22,10 @@ function password(code, act) {
         alert("Wrong password. Access denied.");
     }
 }
+function doact(act){
+    new Function(act)
+}
+
 
 function link(node)
 {
@@ -29,6 +33,11 @@ function link(node)
         /\[\[(.*)\|(.*)\]\]/
         ,
         `<button onclick="goto('$2')">$1</button>`
+    )
+    node.innerHTML = node.innerHTML.replace(
+        /\[\>(.*)\|(.*)\<\]/
+        ,
+        `<button onclick=doact('$2')>$1</button>`
     )
     node.innerHTML = node.innerHTML.replace(
         /\[\:(.*)\|(.*),(.*)\:\]/
