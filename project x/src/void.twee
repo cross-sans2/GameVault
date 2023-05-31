@@ -1,0 +1,47 @@
+:: void
+
+you are a boy named Cross.
+
+you wake up in your room
+
+you are dressed in a blue swimsuit, the swimsuit outlines your penis
+
+[[get up|room]]
+
+:: room
+you get up and look arround your room.
+
+its filled with toys and plushies.
+
+[[explore your room|room2]]
+
+:: room2
+You explore your room,
+
+you find your diary1 [[read it|diary1]]
+more toys
+a book your friend gave you
+and some of his pictures [[look at them|pictures1]]
+
+[[leave the room|corridor1]]
+
+:: diary1
+As you open your diary, you see the pages filled with your thoughts and memories. You flip through the pages, reading about your adventures, dreams, and secrets. It's a glimpse into your inner world and emotions. However, as you continue reading, you realize that some pages are missing or torn. It seems like someone deliberately removed parts of your diary. The mystery of the missing pages intrigues you.
+
+[[Continue exploring|room2]]
+
+:: pictures1
+You come across a stack of pictures featuring your friend. In some of them, he's shirtless, showcasing his toned physique. The pictures evoke memories of the time you spent together, the laughter, and the shared experiences. It's a bittersweet reminder of the bond you once had.
+[[Continue exploring|room2]]
+
+
+:: corridor1
+
+you are in the corridor
+
+the walls next to your room's door is painted pink
+
+[[go to the bathroom|bathroom]]
+<<link "go outside" "outside">>
+<<set $loc = "outside1">>
+<</link>>

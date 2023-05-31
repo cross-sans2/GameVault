@@ -1,0 +1,43 @@
+:: lake1
+You: "I wanted to ask you to come with me to the lake. It's such a beautiful day, and it would be fun to spend some time together."
+
+Jack: (smiling) "That sounds like a great idea! I'd love to go to the lake with you."
+
+You and Jack make plans to go to the lake later in the day. Excitement fills the air as you anticipate the adventure ahead.
+
+[[Continue|lake2]]
+
+:: lake2
+You and Jack arrive at the beautiful lake. The sun glistens on the water's surface, and the peaceful sounds of nature surround you.
+
+As you settle down near the water, a sense of tranquility washes over you. You can't help but feel a deep connection with Jack in this serene setting.
+
+[[Go for a swim|swim]]
+[[Have a picnic|picnic]]
+[[Share a tender moment|makeout]]
+
+:: swim
+You and Jack dive into the refreshing water, letting the coolness envelop your bodies. Laughter and splashing fill the air as you enjoy the freedom and joy of swimming together.
+
+[[Continue exploring the lake|lake3]]
+
+:: picnic
+You spread out a cozy blanket and unpack a delicious picnic. As you savor the tasty treats, you engage in heartfelt conversations, sharing dreams and aspirations. The warmth of the sun and the company of Jack create a perfect moment of bliss.
+
+[[Continue exploring the lake|lake3]]
+
+:: makeout
+In the midst of the beautiful scenery, an intense desire overcomes you. You lean in, capturing Jack's lips with your own, and a passionate makeout session ensues. The world around you fades as your bodies entwine, lost in a moment of desire and connection.
+
+The sounds of nature become a backdrop to the whispers and sighs between you, the tension building as your hands explore each other's bodies. The air becomes electric, charged with the undeniable chemistry between you.
+
+After a while, you both break away, breathless but filled with a newfound closeness.
+
+[[Continue exploring the lake|lake3]]
+
+:: lake3
+As you continue to explore the lake, you feel a deep sense of contentment and happiness. The day unfolds with more adventures, laughter, and cherished memories.
+
+Eventually, the sun begins to set, casting a warm glow across the water. You and Jack take a moment to embrace, appreciating the beauty of the moment.
+
+[[Head back home|corridor1]]

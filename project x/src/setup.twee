@@ -1,0 +1,18 @@
+:: StoryTitle
+project x
+
+:: StoryCaption
+project X, by cross
+
+:: StoryData
+{
+    "ifid": "983C50DE-4D6E-4EFF-B0E0-D4FF22A30FCF",
+    "format": "SugarCube",
+    "format-version": "2.36.1",
+    "start":"null"
+}
+:: null
+<<script>>
+alert("this game is not recomended for people under 16 years, strong language and other things")
+<</script>>
+<<goto "void">>

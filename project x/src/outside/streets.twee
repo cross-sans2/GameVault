@@ -1,0 +1,38 @@
+:: outside
+
+<<if $loc == 'outside1'>>
+    You step outside, and the warmth of the sun embraces your skin. It's a beautiful day, and a gentle breeze rustles through the trees. You take a moment to soak in the pleasant sensation, hoping you don't get tan lines where the swimsuit outlines your skin.
+    <<link "explore the neighborhood" "outside">>
+        <<set $loc = "streets1">>
+    <</link>>
+    [[enter your home|corridor1]]
+<<elseif $loc == "streets1">>
+    <<link "go back home" "outside">>
+        <<set $loc = "outside1">>
+    <</link>>
+    <<link "call jack(your boyfriend)" "outside">>
+        <<set $loc = "jack">>
+    <</link>>
+<<elseif $loc == 'jack'>>
+    you go to jack's house and knock on the door,after some a minute, he opens the door and greets you with a kiss
+
+    Jack: (smiling) "nice seeing you"
+    [[ask him about his day|dayj]]
+<</if>>
+
+:: dayj
+you: "so... how was your day?"
+Jack: (smiling) "its better with you here"
+
+you blush
+
+Jack: (eyeing you) "Why are you in a swimsuit?"
+
+You: "to be honest,
+[[i have no idea|continueL]].
+[[i wanted to ask you to come with me to the lake|lake1]].
+"
+
+
+:: continueL
+<<goto 'null'>>
