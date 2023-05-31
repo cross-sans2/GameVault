@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project X</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <my-templates>
+        [[text|id]]
+        [:text|prompt text, wrong pass, pass, act:]
+        [>text|action<]
+    </my-templates>
+
+    <div id="loading-screen">
+        <h1>Loading...</h1>
+        <h2>If it takes more than three seconds to load, then an error occurred.</h2>
+    </div>
+
+    <div id="ui"></div>
+
+    <loc id="main">
+        You are a boy named Cross.
+        
+        You wake up in a cryopod, and as you get out of it, you look at your surroundings. It is filled with lab equipment.
+        
+        You then check yourself. You are dressed in a blue swimsuit with the characters '305f' barely readable. The swimsuit also outlines your penis.
+        
+        You see a door in the corner of the room.
+        
+        [[Go to the door|corridor1]]
+    </loc>
+        
+    <loc id="corridor1">
+        You go to the door and push it open.
+        You are in a large corridor, with sirens blaring and the lights flickering red.
+        You see two doors.
+        
+        [:Enter the green door|Enter the password,Wrong password. Try again.,20452,goto('escape2'):]
+        [[Enter the white door|corridor2]]
+    </loc>
+    
+    <loc id="corridor2">
+        You enter the white door and find yourself in another room.
+        There is a control panel with a code lock on the wall.
+        
+        [:Enter the code|Enter the code to unlock the door,Incorrect code. Try again.,1234,goto('corridor3'):]
+        [[Go back to the corridor|corridor1]]
+    </loc>
+    
+    <loc id="corridor3">
+        You successfully enter the code and unlock the door.
+        The door opens to a dimly lit hallway.
+        
+        [[Continue down the hallway|corridor4]]
+    </loc>
+    
+    <loc id="corridor4">
+        You walk down the hallway, and the sirens continue to blare.
+        There are more doors along the corridor.
+        
+        [:Open the red door|Enter the password,Wrong password. Try again.,9876,goto('redRoom'):]
+        [[Open the blue door|blueRoom]]
+        [[Open the yellow door|yellowRoom]]
+        [[Go back|corridor3]]
+    </loc>
+    
+    <loc id="redRoom">
+        You enter the red door and find yourself in a room filled with computer terminals.
+        There is a note on one of the desks that reads:
+        "To proceed, solve the following equation: 2 + 2 * 4 - 6 / 3"
+        
+        [:Solve the equation|Enter your answer,Incorrect answer. Try again.,8,goto('corridor4'):]
+        [[Leave the room|corridor4]]
+    </loc>
+    
+    <loc id="blueRoom">
+        You enter the blue door and find a room with a large crate in the center.
+        The crate is sealed shut and requires a passcode to open.
+        
+        [:Enter the passcode|Enter the passcode to open the crate,Wrong passcode. Try again.,2468,goto('treasureRoom'):]
+        [[Leave the room|corridor4]]
+    </loc>
+    
+    <loc id="yellowRoom">
+        You enter the yellow door and discover a room filled with plants and vegetation.
+        It feels calming and peaceful compared to the rest of the facility.
+        
+        [[Explore the room|exploreRoom]]
+        [[Leave the room|corridor4]]
+    </loc>
+    
+    <loc id="exploreRoom">
+        You explore the room and find a hidden diary that reveals the secrets of the facility.
+        The diary mentions an escape route through an underground tunnel.
+        
+        [:Proceed to the underground tunnel|Enter the password,Wrong password. Try again.,TUNNEL,goto('escape3'):]
+        [[Leave the room|yellowRoom]]
+    </loc>
+    
+    <loc id="treasureRoom">
+        You successfully enter the passcode, and the crate opens.
+        Inside, you find a valuable artifact and a keycard.
+        
+        [:Take the artifact|You take the artifact with you,give('Artifact'),goto('corridor4'):]
+        [:Take the keycard|You take the keycard with you,give('Keycard'),goto('corridor4'):]
+    </loc>
+    
+    <loc id="escape2">
+        You punch the code into the green door, and it opens, revealing the outside world.
+        <h1>Escaped - Ending 2</h1>
+    </loc>
+    
+    <loc id="escape3">
+        You enter the password and discover the entrance to the underground tunnel.
+        You make your way through the tunnel, eventually reaching the surface.
+        
+        <h1>Escaped - Ending 3</h1>
+    </loc>
+
+    <script src="script.js"></script>
+</body>
+</html>
