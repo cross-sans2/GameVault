@@ -1,9 +1,0 @@
-:: StoryData
-{
-    "ifid": "843A424B-8F17-4570-9574-32BEFF7D983F",
-    "format": "sugarcube",
-    "format-version": "2.36.1",
-    "start":"void"
-}
-
-:: void
